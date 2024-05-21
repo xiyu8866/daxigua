@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>图片压缩</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/layui/2.8.17/css/layui.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layui-main layui-padding-3">
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">图片宽度</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="width" autocomplete="off" placeholder="请输入" lay-verify="required" value="1000" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-text-em">压缩后的图片宽度</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">压缩比例</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="quality" autocomplete="off" placeholder="请输入" lay-verify="required" value="0.8" step="0.1" min="0" max="1" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-text-em">降低画质比例，0-1（值越小越模糊）</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">图片列表</label>
+                <div class="layui-input-block">
+                    <input id="file_dom" type="file" multiple style="margin: 6px 0 0 8px;" >
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="demo2">下载</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://unpkg.com/imgzip@2.0.8/dist/index.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/layui/2.8.17/layui.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        layui.use(['form', 'layer'], function () {
+            const form = layui.form;
+            const layer = layui.layer;
+            form.on('submit(demo2)', data => {
+                download();
+                return false;   
+            })
+
+            let fileList = [];
+            document.getElementById("file_dom").onchange = function () {
+                const maxWidth = document.querySelector('input[name=width]').value;
+                const quality = document.querySelector('input[name=quality]').value;
+                const compress = new imgZip({ quality: quality, width: maxWidth });
+                fileList = [];
+    
+                for (let i = 0; i < this.files.length; i++) {
+                    compress.photoCompress(this.files[i], base64 => {
+                        fileList.push({
+                            name: this.files[i].name,
+                            img: imgZip.convertBase64UrlToBlob(base64)
+                        })
+                    });
+                }
+            };
+    
+            function download() {
+                if (fileList.length == 0) {
+                    layer.msg('无内容', { icon: 5 });
+                    return false;
+                }
+                if (fileList.length == 1) {
+                    saveAs(fileList[0].img, fileList[0].name);
+                    return false;
+                }
+                const zip = new JSZip();
+                fileList.forEach(item => {
+                    zip.file(item.name, item.img);
+                })
+                zip.generateAsync({
+                    type: 'blob'
+                }).then(content => {
+                    saveAs(content, '图片列表.zip')
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

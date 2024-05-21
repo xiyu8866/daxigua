@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>cctv视频下载</title>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        body { text-align: center } header { margin: 20px 0; } header h1 { width: 280px; margin: 0 auto; } html { font-size: 62.5%; font-family: 'microsoft yahei', Simsun, sans-serif; } blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul { margin: 0; padding: 0 } h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: arial, 'hiragino sans gb', 'microsoft yahei', Simsun, sans-serif } li { list-style: none } a:link, a:visited { text-decoration: none } body { font-size: 12px; line-height: 1.333 } .clear { clear: both; } .cont { width: 1200px; margin: 0 auto; } #ckplays { min-height: 300px; background: #eee } #footer { margin-top: 30px; color: #111; text-align: center } @media screen and (min-width:0px) and (max-width:900px) { .cont { width: auto; min-width: auto; } .navigation-up .navigation-v3 { margin: 0; } #ckplays { width: 100%; min-height: 260px; height: auto; } .searchs .text { width: 80%; } } iframe { width: 100%; height: 600px; }
+    </style>
+    <link href="https://s3.pstatp.com/cdn/expire-1-M/amazeui/2.7.2/css/amazeui.min.css" type="text/css"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="cont am-margin-top-lg">
+        <div class="am-u-lg-12 am-margin-bottom-lg" style="padding:0;">
+            <div class="am-input-group">
+                <!-- <input type="text" class="am-form-field" id="m3u8url" placeholder="请输入cctv视频地址"> -->
+                <span class="am-input-group-btn">
+                    <button class="am-btn am-btn-default" type="button" onclick="run()">播放不了？切换</button>
+                </span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="ckplays" class="am-margin-bottom-lg"></div>
+        <iframe id="iframe" style="display: none;" frameborder="0"></iframe>
+    </div>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/dplayer/1.27.1/DPlayer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/m3u8-parser/7.1.0/m3u8-parser.min.js"></script>
+    <script src="m3u8Player.js"></script>
+    <script>
+        let title = '', guid = '';
+        const host = ['myhwcdn.cn', 'kcdnvip.com', 'myalicdn.com'];
+        let index = 0;
+        const iframe = $('#iframe'), iframeSrc = 'download.html';
+        const myPlayer = new m3u8Player(document.getElementById('ckplays'), function (e) {
+            iframe.attr('src', iframeSrc + '?source=' + e.url + '&title=' + title);
+        });
+
+        (function init() {
+            guid = getUrlParam("guid");
+            title = getUrlParam("title");
+            if (title) title += encodeURIComponent('_' + '1280*720P')
+            if (guid) run()
+        })()
+
+        function run() {
+            if (index >= host.length) {
+                alert('没有播放源了');
+                return;
+            }
+            myPlayer.render(`https://hls.cntv.${host[index]}/asp/hls/2000/0303000a/3/default/${guid}/2000.m3u8`);
+            iframe.show();
+            index++;
+        }
+
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return r[2]; return '';
+        }
+    </script>
+</body>
+
+</html>
