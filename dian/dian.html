@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电</title>
+    <link href="https://www.yiwuzhishu.cn/Public/layui/layui_2.9/css/layui.css" rel="stylesheet">
+    <style>
+        @media screen and (min-width: 1400px) {
+            .layui-container {
+                width: 1400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layui-container">
+        <table class="layui-hide" id="ID-table-demo-editmodes"></table>
+    </div>
+    <script type="text/html" id="toolbarDemo">
+        <div class="layui-btn-group">
+            <button class="layui-btn layui-btn-sm" lay-on="add">添加</button>
+            <button class="layui-btn layui-btn-sm" lay-on="pull">拉取</button>
+            <button class="layui-btn layui-btn-sm" lay-on="push">推送</button>
+            <button class="layui-btn layui-btn-sm" lay-on="clear">清除本地</button>
+        </div>
+    </script>
+    <script src="https://www.yiwuzhishu.cn/Public/layui/layui_2.9/layui.js"></script>
+    <script>
+        layui.use(function () {
+            var $ = layui.$, table = layui.table, laydate = layui.laydate, util = layui.util, layer = layui.layer;
+
+            let global_data = layui.data('electricity').v || [];
+            if (global_data.length == 0) {
+                getData();
+            }
+
+            // 渲染
+            table.render({
+                elem: '#ID-table-demo-editmodes',
+                height: 'full-50',
+                css: [
+                    '.layui-table-cell{height: 46px; line-height: 36px;}',
+                    '.layui-table-cell input{height: 36px; padding: 0 5px;}'
+                ].join(''),
+                toolbar: '#toolbarDemo',
+                defaultToolbar: ['filter'],
+                data: global_data,
+                cols: [
+                    [
+                        { field: 'date', title: '日期', rowspan: 2, minWidth: 130, align: 'center' },
+                        { field: 'balance', title: '24点', minWidth: 100, align: 'center', edit: 'text' },
+                        { field: 'morning', title: '早上', minWidth: 100, align: 'center', edit: 'text' },
+                        { field: 'noon', title: '中午', minWidth: 100, align: 'center', edit: 'text' },
+                        { field: 'night', title: '晚上', minWidth: 100, align: 'center', edit: 'text' },
+                        { field: 'usage', title: '一天使用量', minWidth: 140, align: 'center' },
+                        { field: 'usage_night', title: '24点-08点使用量', minWidth: 140, align: 'center' },
+                        { field: 'usage_day', title: '08点-19点使用量', minWidth: 140, align: 'center' },
+                        { field: 'usage_fromWork', title: '19点-24点使用量', minWidth: 140, align: 'center' },
+                        { field: 'usage_noon', title: '08点-中午使用量', minWidth: 140, align: 'center' },
+                        { field: 'usage_noon_1', title: '中午-19点使用量', minWidth: 140, align: 'center' },
+                    ]
+                ],
+                done: function (res, curr, count) {
+                    table.on('edit(ID-table-demo-editmodes)', function (obj) {
+                        var value = obj.value, field = obj.field;
+
+                        var update = {};
+                        update[field] = value;
+                        obj.update(update);
+                        saveTable();
+
+                        calculateUsage();
+                    });
+                }
+            });
+
+            util.on({
+                add: function () {
+                    addTable();
+                },
+                push: function () {
+                    if (!layui.data('electricity').v) {
+                        layer.msg('没有数据');
+                        return;
+                    }
+                    $.post('/dian.php', {data: JSON.stringify(layui.data('electricity').v)}, function(r) {
+                        let res = JSON.parse(r);
+                        if (res.code == 1) {
+                            layer.msg(res.msg);
+                        }
+                    })
+                },
+                pull: function () {
+                    getData()
+                },
+                clear: function () {
+                    localStorage.clear();
+                }
+            })
+
+            function addTable(date) {
+                let d = table.cache['ID-table-demo-editmodes'];
+                if (d.length) { 
+                    date = new Date(d[d.length - 1].date);
+                } else {
+                    date = new Date();
+                    date.setDate(date.getDate() - 1);
+                }
+
+                d.push({ date: addOneDay(date), balance: '', morning: '', night: '', noon: '' });
+                table.renderData('ID-table-demo-editmodes');
+            }
+
+            function addOneDay(date, days = 1) {
+                let newDate = new Date(date.getTime());
+                let day = newDate.getDate();
+                newDate.setDate(day + days);
+                return util.toDateString(newDate, 'yyyy-MM-dd');
+            }
+
+            setTimeout(() => {
+                calculateUsage();
+            }, 500);
+            function calculateUsage(d) {
+                if (d) {
+                    table.cache['ID-table-demo-editmodes'] = d
+                } else {
+                    d = table.cache['ID-table-demo-editmodes']
+                }
+                let len = d.length;
+                for (let i = 0; i < len; i++) {
+                    let now_balance = parseFloat(d[i].balance),
+                        next_balance = i < len - 1 ? parseFloat(d[i + 1].balance) : 0,
+                        morning = parseFloat(d[i].morning),
+                        night = parseFloat(d[i].night),
+                        noon = parseFloat(d[i].noon);
+                    d[i].usage = _calc(now_balance, next_balance);
+                    d[i].usage_day = _calc(morning, night);
+                    d[i].usage_night = _calc(now_balance, morning);
+                    d[i].usage_fromWork = _calc(night, next_balance);
+                    d[i].usage_noon = _calc(morning, noon);
+                    d[i].usage_noon_1 = _calc(noon, night);
+                }
+                
+                table.renderData('ID-table-demo-editmodes');
+
+                function _calc(arg, arg1) {
+                    return arg > 0 && arg1 > 0 ? (arg - arg1).toFixed(2) : '--';
+                }
+            }
+
+            function getData() {
+                $.get('/dian.php', function(res) {
+                    if (res) {
+                        let data = JSON.parse(res);
+                        calculateUsage(data);
+                    }
+                })
+            }
+            
+            function saveTable() {
+                let d = table.cache['ID-table-demo-editmodes'];
+                let data = d.map((item) => {
+                    return {
+                        date: item.date,
+                        balance: item.balance,
+                        morning: item.morning,
+                        night: item.night,
+                        noon: item.noon,
+                    }
+                });
+                layui.data('electricity', {
+                    key: 'v',
+                    value: data
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
