@@ -1,4 +1,14 @@
-# 托管在 https://your-server.com/dev-hosts.yaml
+proxies:
+  - name: "DIRECT"
+    type: direct
+    udp: true
+
+proxy-groups:
+  - name: "GLOBAL"
+    type: select
+    proxies:
+      - "DIRECT"
+
 dns:
   enable: true
   listen: 0.0.0.0:53
@@ -9,7 +19,5 @@ dns:
   hosts:
     '19q.cc': 104.21.9.199
 
-proxies: []
-proxy-groups: []
 rules:
-  - MATCH,DIRECT
+  - MATCH,GLOBAL
