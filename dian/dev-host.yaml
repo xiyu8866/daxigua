@@ -1,5 +1,5 @@
 proxies:
-  - name: "DIRECT"
+  - name: "NO-PROXY"
     type: direct
     udp: true
 
@@ -7,7 +7,7 @@ proxy-groups:
   - name: "GLOBAL"
     type: select
     proxies:
-      - "DIRECT"
+      - "NO-PROXY"
 
 dns:
   enable: true
