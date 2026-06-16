@@ -1,0 +1,15 @@
+# 托管在 https://your-server.com/dev-hosts.yaml
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 223.5.5.5
+  hosts:
+    '19q.cc': 104.21.9.199
+
+proxies: []
+proxy-groups: []
+rules:
+  - MATCH,DIRECT
