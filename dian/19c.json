@@ -7,10 +7,10 @@
     {
       "key": "19c",
       "name": "19c",
-      "type": 3,
-      "api": "csp_AppYsV2",
-      "searchTop": true,
-      "ext": "https://19q.cc/api.php/provide/vod"
+      "type": 1,
+      "api": "https://19q.cc/api.php/provide/vod?ac=list",
+      "searchable": 1,
+      "changeable": 1
     }
   ]
 }
