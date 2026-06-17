@@ -1,0 +1,16 @@
+{
+  "spider": "./jar/vox.jar;md5;1b9644652c8032b9586eeb0a0efd0f40",
+  "README": "http://rihou.cc:88/README.txt",
+  "README2": "http://rihou.cc:88/README2.txt",
+  "warningText": "禁止任何商业用途，仅限个人学习爬虫原理使用。",
+  "sites": [
+    {
+      "key": "19c",
+      "name": "19c",
+      "type": 3,
+      "api": "csp_AppYsV2",
+      "searchTop": true,
+      "ext": "https://19q.cc/api.php/provide/vod"
+    }
+  ]
+}
