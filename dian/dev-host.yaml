@@ -1,11 +1,11 @@
 proxies:
   - name: "NO-PROXY"
-    输入: direct
+    type: direct
     udp: true
 
 proxy-groups:
   - name: "GLOBAL"
-    输入: select
+    type: select
     proxies:
       - "NO-PROXY"
 
