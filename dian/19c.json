@@ -1,5 +1,5 @@
 {
-  "spider": "./jar/vox.jar;md5;1b9644652c8032b9586eeb0a0efd0f40",
+  "spider": "./jar/vox.jar;md5;1b9644652c8032b9586eeb0a0efd0f40"，
   "README": "http://rihou.cc:88/README.txt",
   "README2": "http://rihou.cc:88/README2.txt",
   "warningText": "禁止任何商业用途，仅限个人学习爬虫原理使用。",
@@ -11,6 +11,27 @@
       "api": "https://19q.cc/api.php/provide/vod?ac=list",
       "searchable": 1,
       "changeable": 1
+    },
+    {
+      "key": "1780505240003",
+      "name": "👖艾旦",
+      "type": 1,
+      "api": "https://lovedan.net/api.php/provide/vod",
+      "searchable": 1
+    },
+    {
+      "key": "11",
+      "name": "索尼",
+      "type": 1,
+      "api": "https://suoniapi.com/api.php/provide/vod",
+      "searchable": 1
+    },
+    {
+      "key": "12",
+      "name": "杏吧",
+      "type": 1,
+      "api": "https://xingba111.com/api.php/provide/vod",
+      "searchable": 1
     }
   ]
 }
