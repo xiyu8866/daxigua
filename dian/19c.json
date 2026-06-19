@@ -20,28 +20,23 @@
       "searchable": 1
     },
     {
-      "key": "ckbh",
-      "name": "🔞CK百货",
+      "key": "13",
+      "name": "杏吧备用",
       "type": 1,
-      "api": "https://ckbh1.xyz/api.php/provide/vod"
+      "api": "https://api.xgbbk8.com/api.php/provide/vod",
+      "searchable": 1
+    },
+    {
+      "key": "ckbh",
+      "name": "xingba3",
+      "type": 1,
+      "api": "https://xingba222.com/api.php/provide/vodd"
     },
     {
       "key": "CK资源",
       "name": "🔞CK资源",
       "type": 1,
       "api": "https://ckzy.me/api.php/provide/vod"
-    },
-    {
-      "key": "ljzy",
-      "name": "🔞辣椒",
-      "type": 1,
-      "api": "http://lajiaozy.com/api.php/provide/vod"
-    },
-    {
-      "key": "thzy",
-      "name": "🔞桃花资源",
-      "type": 1,
-      "api": "https://thzy1.me/api.php/provide/vod/"
     },
     {
       "key": "lbzy",
@@ -68,34 +63,10 @@
       "api": "https://fqzy.me/api.php/provide/vod/"
     },
     {
-      "key": "lsb",
-      "name": "🔞lsb资源",
-      "type": 1,
-      "api": "https://apilsbzy1.com/api.php/provide/vod/"
-    },
-    {
-      "key": "ynzy",
-      "name": "🔞越南",
-      "type": 1,
-      "api": "https://vnzyz.com/api.php/provide/vod"
-    },
-    {
-      "key": "xjzy",
-      "name": "🔞小鸡",
-      "type": 1,
-      "api": "https://api.xiaojizy.live/provide/vod"
-    },
-    {
       "key": "dnzzy",
       "name": "🔞大奶子",
       "type": 1,
       "api": "https://apidanaizi.com/api.php/provide/vod"
-    },
-    {
-      "key": "ddzy",
-      "name": "🔞滴滴",
-      "type": 1,
-      "api": "https://api.ddapi.cc/api.php/provide/vod"
     },
     {
       "key": "hsckzy",
@@ -116,36 +87,10 @@
       "api": "https://apiyutu.com/api.php/provide/vod"
     },
     {
-      "key": "alvinzy",
-      "name": "🔞AIvin",
-      "type": 1,
-      "api": "http://lbapiby.com/api.php/provide/vod/at/json"
-    },
-    {
-      "key": "ddzy2",
-      "name": "🔞豆豆",
-      "type": 1,
-      "api": "https://doudouzy.com/api.php/provide/vod/"
-    },
-    {
       "key": "hlxzy",
       "name": "🔞黑料X",
       "type": 1,
       "api": "https://www.heiliaozyapi.com/api.php/provide/vod/"
-    },
-    {
-      "key": "91AV",
-      "name": "🔞91AV",
-      "type": 1,
-      "api": "https://91av.cyou/api.php/provide/vod",
-      "searchable": 1
-    },
-    {
-      "key": "淫水机",
-      "name": "🔞淫水机",
-      "type": 1,
-      "api": "https://www.xrbsp.com/api/json.php",
-      "searchable": 1
     },
     {
       "key": "香奶儿",
@@ -180,20 +125,6 @@
       "name": "🔞森林",
       "type": 1,
       "api": "http://slapibf.com/api.php/provide/vod",
-      "searchable": 1
-    },
-    {
-      "key": "番茄",
-      "name": "🔞番茄",
-      "type": 1,
-      "api": "https://fqzy.me/api.php/provide/vod/?ac=list",
-      "searchable": 1
-    },
-    {
-      "key": "色猫",
-      "name": "🔞色猫",
-      "type": 1,
-      "api": "http://caiji.semaozy.net/inc/apijson_vod.php",
       "searchable": 1
     }
   ],
