@@ -1,24 +1,7 @@
 {
   "spider": "./jar/vox.jar;md5;1b9644652c8032b9586eeb0a0efd0f40",
-  "README": "http://rihou.cc:88/README.txt",
-  "README2": "http://rihou.cc:88/README2.txt",
   "warningText": "禁止任何商业用途，仅限个人学习爬虫原理使用。",
   "sites": [
-    {
-      "key": "19c",
-      "name": "19c",
-      "type": 1,
-      "api": "https://19q.cc/api.php/provide/vod",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "12",
-      "name": "杏吧",
-      "type": 1,
-      "api": "https://xingba111.com/api.php/provide/vod",
-      "searchable": 1
-    },
     {
       "key": "13",
       "name": "杏吧备用",
@@ -30,102 +13,129 @@
       "key": "ckbh",
       "name": "xingba3",
       "type": 1,
-      "api": "https://xingba222.com/api.php/provide/vodd"
+      "api": "https://xingba222.com/api.php/provide/vod"
     },
     {
-      "key": "CK资源",
-      "name": "🔞CK资源",
+      "key": "12",
+      "name": "杏吧",
       "type": 1,
-      "api": "https://ckzy.me/api.php/provide/vod"
+      "api": "https://xingba111.com/api.php/provide/vod",
+      "searchable": 1
     },
     {
-      "key": "lbzy",
-      "name": "🔞樂播資源",
+      "key": "XMVideo",
+      "name": "熊猫视频",
+      "type": 3,
+      "api": "csp_XMVideo",
+      "searchable": 1,
+      "filterable": 1,
+      "jar": "https://github.1zyq1.com/raw/atsushi444/tvbox/main/jar/182.jar"
+    },
+    {
+      "key": "采集A（精品）",
+      "name": "🔞精品",
       "type": 1,
-      "api": "https://lbapi9.com/api.php/provide/vod/"
+      "api": "http://www.jingpinx.com/api.php/provide/vod/",
+      "playerType": 1,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
     },
     {
-      "key": "fhzy",
+      "key": "jkun资源",
+      "name": "jkun资源",
+      "type": 1,
+      "api": "https://www.jkunzyapi.com/api.php/provide/vod/",
+      "searchable": 0,
+      "quickSearch": 0
+    },
+    {
+      "key": "19c",
+      "name": "19c",
+      "type": 1,
+      "api": "https://19q.cc/api.php/provide/vod",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "精品x资源",
+      "name": "精品x资源",
+      "type": 1,
+      "api": "http://www.jingpinx.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "老色p",
+      "name": "老色p",
+      "type": 1,
+      "api": "https://apilsbzy.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    {
+      "key": "zp059",
       "name": "🔞番号资源",
-      "type": 1,
-      "api": "http://fhapi9.com/api.php/provide/vod/"
+      "type": 0,
+      "api": "http://fhapi9.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
     },
     {
-      "key": "hsck",
-      "name": "🔞黄色仓库(旧)",
+      "key": "桃花资源",
+      "name": "桃花资源",
       "type": 1,
-      "api": "https://hsckzy.vip/api.php/provide/vod/"
+      "api": "https://thzy1.me/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
     },
     {
-      "key": "fqzy",
-      "name": "🔞国产资源",
+      "key": "老色逼资源站",
+      "name": "老色逼资源站",
       "type": 1,
-      "api": "https://fqzy.me/api.php/provide/vod/"
+      "api": "https://apilsbzy1.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
     },
     {
-      "key": "dnzzy",
-      "name": "🔞大奶子",
+      "key": "155资源",
+      "name": "155资源",
       "type": 1,
-      "api": "https://apidanaizi.com/api.php/provide/vod"
+      "api": "https://155api.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
     },
     {
-      "key": "hsckzy",
-      "name": "🔞黄色仓库",
+      "key": "滴滴资源",
+      "name": "滴滴资源",
       "type": 1,
-      "api": "https://hsckzy888.com/api.php/provide/vod/from/hsckm3u8/at/json"
+      "api": "https://api.ddapi.cc/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
     },
     {
-      "key": "bhzy",
-      "name": "🔞百花",
-      "type": 1,
-      "api": "https://bhziyuan.com/api.php/provide/vod/?ac=list"
+      "key": "zp011",
+      "name": "🔞78乐播",
+      "type": 0,
+      "api": "https://lbapi9.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
     },
     {
-      "key": "ytzy",
-      "name": "🔞玉兔",
+      "key": "处女控",
+      "name": "处女控采集",
       "type": 1,
-      "api": "https://apiyutu.com/api.php/provide/vod"
-    },
-    {
-      "key": "hlxzy",
-      "name": "🔞黑料X",
-      "type": 1,
-      "api": "https://www.heiliaozyapi.com/api.php/provide/vod/"
-    },
-    {
-      "key": "香奶儿",
-      "name": "🔞香奶儿",
-      "type": 1,
-      "api": "https://www.gdlsp.com/api/json.php",
-      "searchable": 1
-    },
-    {
-      "key": "优异",
-      "name": "🔞优异",
-      "type": 1,
-      "api": "https://a.uezy.pw/api.php/provide/vod",
-      "searchable": 1
-    },
-    {
-      "key": "白嫖",
-      "name": "🔞白嫖",
-      "type": 1,
-      "api": "https://www.kxgav.com/api/json.php",
-      "searchable": 1
-    },
-    {
-      "key": "155",
-      "name": "🔞155",
-      "type": 1,
-      "api": "https://155api.com/api.php/provide/vod/provide/vod",
-      "searchable": 1
-    },
-    {
-      "key": "森林",
-      "name": "🔞森林",
-      "type": 1,
-      "api": "http://slapibf.com/api.php/provide/vod",
-      "searchable": 1
+      "api": "https://ckzy.me/api.php/provide/vod/",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0
     }
   ],
   "lives": [
@@ -142,5 +152,255 @@
       "type": 1,
       "url": "https://jx.jsonplayer.com/player/?url="
     }
+  ],
+  "doh": [
+    {
+      "name": "DNSPod",
+      "url": "https://doh.pub/dns-query",
+      "ips": [
+        "119.29.29.29",
+        "119.28.28.28",
+        "2400:da00::6666",
+        "2400:da00:1::6666"
+      ]
+    },
+    {
+      "name": "Alidns",
+      "url": "https://dns.alidns.com/dns-query",
+      "ips": [
+        "223.5.5.5",
+        "223.6.6.6",
+        "2400:3200::1",
+        "2400:3200:baba::1"
+      ]
+    },
+    {
+      "name": "Google",
+      "url": "https://dns.google/dns-query",
+      "ips": [
+        "8.8.4.4",
+        "8.8.8.8",
+        "2001:4860:4860::8888",
+        "2001:4860:4860::8844"
+      ]
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query",
+      "ips": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ]
+    },
+    {
+      "name": "Tencent",
+      "url": "https://doh.pub/dns-query",
+      "ips": [
+        "1.12.12.12",
+        "120.53.53.53",
+        "2402:4e00::",
+        "2402:4e00:1::"
+      ]
+    },
+    {
+      "name": "360DNS",
+      "url": "https://doh.360.cn/dns-query",
+      "ips": [
+        "101.226.4.6",
+        "218.30.118.6",
+        "123.125.81.6",
+        "140.207.198.6"
+      ]
+    },
+    {
+      "name": "AdGuard",
+      "url": "https://dns.adguard.com/dns-query",
+      "ips": [
+        "94.140.14.140",
+        "94.140.14.141",
+        "2a10:50c0::ad1:ff",
+        "2a10:50c0::ad2:ff"
+      ]
+    },
+    {
+      "name": "DNSWatch",
+      "url": "https://dns.watch/dns-query",
+      "ips": [
+        "84.200.69.80",
+        "84.200.70.40",
+        "2001:67c:2354:2::64",
+        "2001:67c:2354:3::64"
+      ]
+    },
+    {
+      "name": "Quad9",
+      "url": "https://dns.quad9.net/dns-query",
+      "ips": [
+        "9.9.9.9",
+        "149.112.112.112",
+        "2620:fe::fe",
+        "2620:fe::9"
+      ]
+    }
+  ],
+  "sniffer": {
+    "userAgent": "Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/105.0.0.0Safari/537.36Edg/105.0.1343.27",
+    "isVideoFormat": "http((?!http).){26,}\\.(m3u8|mp4|flv|avi|mkv|wmv|mpg|mpeg|mov|ts|3gp|rm|rmvb|asf|m4a|mp3|wma)",
+    "custom": [
+      {
+        "url": "/Cloud/Down/AliCloud/",
+        "mimeType": "text/html",
+        "encoding": "utf-8",
+        "header": {
+          "Referer": "https://zxzj.vip/"
+        }
+      }
+    ]
+  },
+  "rules": [
+    {
+      "host": "www.djuu.com",
+      "rule": [
+        "mp4.djuu.com",
+        "m4a"
+      ]
+    },
+    {
+      "host": "m.ysxs8.vip",
+      "rule": [
+        "ysting.ysxs8.vip:81",
+        "xmcdn.com"
+      ],
+      "filter": []
+    },
+    {
+      "host": "hdmoli.com",
+      "rule": [
+        ".m3u8"
+      ]
+    },
+    {
+      "host": "https://api.live.bilibili.com",
+      "rule": [
+        "bilivideo.com",
+        "/index.m3u8"
+      ],
+      "filter": [
+        "data.bilibili.com/log/web",
+        "i0.hdslb.com/bfs/live/"
+      ]
+    },
+    {
+      "host": "www.agemys.cc",
+      "rule": [
+        "cdn-tos",
+        "obj/tos-cn"
+      ]
+    },
+    {
+      "host": "www.fun4k.com",
+      "rule": [
+        "https://hd.ijycnd.com/play",
+        "index.m3u8"
+      ]
+    },
+    {
+      "host": "zjmiao.com",
+      "rule": [
+        "play.videomiao.vip/API.php",
+        "time=",
+        "key=",
+        "path="
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "default.365yg.com"
+      ]
+    },
+    {
+      "host": "dyxs20.com",
+      "rule": [
+        ".m3u8"
+      ]
+    },
+    {
+      "host": "www.sharenice.net",
+      "rule": [
+        "http.*?/play.{0,3}\\?[^url]{2,8}=.*"
+      ]
+    },
+    {
+      "host": "www.sharenice.net",
+      "rule": [
+        "sovv.qianpailive.com",
+        "vid="
+      ],
+      "filter": []
+    },
+    {
+      "host": "www.sharenice.net",
+      "rule": [
+        "qianpailive.com"，
+        "vid="
+      ]
+    },
+    {
+      "host": "www.sharenice.net",
+      "rule": [
+        "douyin.com",
+        "/play/"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "douyin.com/aweme",
+        "video_id="
+      ]
+    },
+    {
+      "host": "www.sharenice.net",
+      "rule": [
+        "huoshan.com",
+        "/item/video/"
+      ],
+      "filter": []
+    },
+    {
+      "host": "*",
+      "rule": [
+        "http((?!http).){12,}?\\.(m3u8|mp4|flv|avi|mkv|rm|wmv|mpg|m4a)\\?.*"
+      ]
+    },
+    {
+      "host": "*",
+      "rule": [
+        "http((?!http).){12,}\\.(m3u8|mp4|flv|avi|mkv|rm|wmv|mpg|m4a)"
+      ]
+    }
+  ],
+  "flags": [
+    "imgo",
+    "youku",
+    "qq",
+    "iqiyi",
+    "qiyi",
+    "fun",
+    "letv",
+    "leshi",
+    "sohu",
+    "tudou",
+    "xigua",
+    "cntv",
+    "1905",
+    "pptv",
+    "mgtv",
+    "wasu",
+    "bilibili",
+    "renrenmi"
   ]
 }
