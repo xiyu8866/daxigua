@@ -1,141 +1,141 @@
 {
-  "spider": "./jar/vox.jar;md5;1b9644652c8032b9586eeb0a0efd0f40",
-  "warningText": "禁止任何商业用途，仅限个人学习爬虫原理使用。",
-  "sites": [
-    {
-      "key": "蜜桃AV",
-      "name": "蜜桃AVx",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "请求头": "User-Agent$MOBILE_UA",
-        "编码": "UTF-8",
-        "数组": "<a&&</span></a>",
-        "链接": "href=\"&&\"",
-        "标题": "title=\"&&\"",
-        "图片": "data-src=\"&&\"",
-        "副标题": ">&&<span>",
-        "线路标题": "在线播放",
-        "简介": "alt=\"&&\"",
-        "搜索模式": "1",
-        "搜索url": "https://20260605bb-bnm.avriri01.top/index.php/vod/search/page/{pg}/wd/{wd}.html",
-        "分类url": "https://20260605bb-bnm.avriri01.top/index.php/vod/type/id/{cateId}/page/{catePg}.html",
-        "分类": "国产无码$guochanjingxuan#国产口爆$yazhoukoujiao#日韩无码$rihanwuma#阳台自拍$yangtaizipai#国产热门$yazhouqunjiao#海边偷拍$haibiantoupai#偷情车震$touqingchezhen#污污动漫$wuwudongman#拉拉群交$lalaqunjiao#Gay群交$gayqunjiao#欧美精选$oumeijingxuan#自慰手淫$ziweishouyin#N女群欢$nnvqunhuan#美臀诱惑$meitunyouhuo#麻豆传媒$madouchuanmei#天美传媒$tianmeichuanmei#皇家华人$huangjiahuaren#精东影业$jingdongyingye#起点传媒$qidianchuanmei#"
-      }
-    },
-    {
-      "key": "花心小妞",
-      "name": "花心小妞",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "分类url": "https://i3j4k5l6.hxxn19.cc/vodtype/{cateId}-{catePg}.html",
-        "发布": "hxxn99.cc",
-        "数组": "<dl>&&</dl>",
-        "标题": "<h3>&&</h3>",
-        "图片": "data-original=\"&&\"",
-        "副标题": "观影愉快",
-        "链接": "href=\"&&\"[替换:voddetail>>vodplay#.html>>-1-1.html]",
-        "分类数组": "<dd>&&</dd>",
-        "分类标题": ">&&</a>",
-        "分类": "乌鸦传媒$29#精东传媒$27#蜜桃传媒$24#大象传媒$34#开心鬼传媒$35#麻豆传媒$21#迷你传媒$33#星空传媒$26#91制片$22#天美传媒$23#杏吧传媒$31#萝莉社$38#皇家华人$25#兔子先生$30#糖心视频$37#性视界$39#热门黑料$223#户外野战$224#偷拍自拍$225#必看大瓜$226#麻豆探花$227#校园生活$228#顶流网红$229#中文字幕$230#日本有码$43#日本字幕$41#国产视频$40#强奸乱伦$46#日本无码$44#欧美无码$45#国产传媒$42#制服诱惑$47#网曝黑料$53#激情动漫$49#影片解说$55#美女主播$48#明星换脸$50#抖阴视频$51#伦理三级$54#女优明星$52#捆绑调教$56#网红头条$60#极品媚黑$58#萝莉少女$57#VR视角$63#人妖系列$61#韩国主播$62#女同性恋$198#乱伦精品$210#欧美大炮$211#极品学妹$215#国产视频$216",
-        "简介": ""
-      }
-    }
-  ],
-  "doh": [
-    {
-      "name": "DNSPod",
-      "url": "https://doh.pub/dns-query",
-      "ips": [
-        "119.29.29.29",
-        "119.28.28.28"，
-        "2400:da00::6666"，
-        "2400:da00:1::6666"
-      ]
-    },
-    {
-      "name": "Alidns",
-      "url": "https://dns.alidns.com/dns-query",
-      "ips": [
-        "223.5.5.5"，
-        "223.6.6.6",
-        "2400:3200::1",
-        "2400:3200:baba::1"
-      ]
-    },
-    {
-      "name": "Google",
-      "url": "https://dns.google/dns-query",
-      "ips": [
-        "8.8.4.4",
-        "8.8.8.8",
-        "2001:4860:4860::8888",
-        "2001:4860:4860::8844"
-      ]
-    },
-    {
-      "name": "Cloudflare",
-      "url": "https://cloudflare-dns.com/dns-query",
-      "ips": [
-        "1.1.1.1",
-        "1.0.0.1",
-        "2606:4700:4700::1111",
-        "2606:4700:4700::1001"
-      ]
-    },
-    {
-      "name": "Tencent"，
-      "url": "https://doh.pub/dns-query",
-      "ips": [
-        "1.12.12.12",
-        "120.53.53.53",
-        "2402:4e00::",
-        "2402:4e00:1::"
-      ]
-    },
-    {
-      "name": "360DNS",
-      "url": "https://doh.360.cn/dns-query",
-      "ips": [
-        "101.226.4.6",
-        "218.30.118.6",
-        "123.125.81.6",
-        "140.207.198.6"
-      ]
-    },
-    {
-      "name": "AdGuard",
-      "url": "https://dns.adguard.com/dns-query",
-      "ips": [
-        "94.140.14.140",
-        "94.140.14.141",
-        "2a10:50c0::ad1:ff"，
-        "2a10:50c0::ad2:ff"
-      ]
-    },
-    {
-      "name": "DNSWatch",
-      "url": "https://dns.watch/dns-query",
-      "ips": [
-        "84.200.69.80",
-        "84.200.70.40",
-        "2001:67c:2354:2::64",
-        "2001:67c:2354:3::64"
-      ]
-    },
-    {
-      "name": "Quad9",
-      "url": "https://dns.quad9.net/dns-query",
-      "ips": [
-        "9.9.9.9"，
-        "149.112.112.112",
-        "2620:fe::fe",
-        "2620:fe::9"
-      ]
-    }
-  ]
+    "spider": "./jar/vox.jar;md5;1b9644652c8032b9586eeb0a0efd0f40",
+    "warningText": "禁止任何商业用途，仅限个人学习爬虫原理使用。",
+    "sites": [
+        {
+            "key": "蜜桃AV",
+            "name": "蜜桃AVx",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": {
+                "请求头": "User-Agent$MOBILE_UA",
+                "编码": "UTF-8",
+                "数组": "<a&&</span></a>",
+                "链接": "href=\"&&\"",
+                "标题": "title=\"&&\"",
+                "图片": "data-src=\"&&\"",
+                "副标题": ">&&<span>",
+                "线路标题": "在线播放",
+                "简介": "alt=\"&&\"",
+                "搜索模式": "1",
+                "搜索url": "https://20260605bb-bnm.avriri01.top/index.php/vod/search/page/{pg}/wd/{wd}.html",
+                "分类url": "https://20260605bb-bnm.avriri01.top/index.php/vod/type/id/{cateId}/page/{catePg}.html",
+                "分类": "国产无码$guochanjingxuan#国产口爆$yazhoukoujiao#日韩无码$rihanwuma#阳台自拍$yangtaizipai#国产热门$yazhouqunjiao#海边偷拍$haibiantoupai#偷情车震$touqingchezhen#污污动漫$wuwudongman#拉拉群交$lalaqunjiao#Gay群交$gayqunjiao#欧美精选$oumeijingxuan#自慰手淫$ziweishouyin#N女群欢$nnvqunhuan#美臀诱惑$meitunyouhuo#麻豆传媒$madouchuanmei#天美传媒$tianmeichuanmei#皇家华人$huangjiahuaren#精东影业$jingdongyingye#起点传媒$qidianchuanmei#"
+            }
+        },
+        {
+            "key": "花心小妞",
+            "name": "花心小妞",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "ext": {
+                "分类url": "https://i3j4k5l6.hxxn19.cc/vodtype/{cateId}-{catePg}.html",
+                "发布": "hxxn99.cc",
+                "数组": "<dl>&&</dl>",
+                "标题": "<h3>&&</h3>",
+                "图片": "data-original=\"&&\"",
+                "副标题": "观影愉快",
+                "链接": "href=\"&&\"[替换:voddetail>>vodplay#.html>>-1-1.html]",
+                "分类数组": "<dd>&&</dd>",
+                "分类标题": ">&&</a>",
+                "分类": "乌鸦传媒$29#精东传媒$27#蜜桃传媒$24#大象传媒$34#开心鬼传媒$35#麻豆传媒$21#迷你传媒$33#星空传媒$26#91制片$22#天美传媒$23#杏吧传媒$31#萝莉社$38#皇家华人$25#兔子先生$30#糖心视频$37#性视界$39#热门黑料$223#户外野战$224#偷拍自拍$225#必看大瓜$226#麻豆探花$227#校园生活$228#顶流网红$229#中文字幕$230#日本有码$43#日本字幕$41#国产视频$40#强奸乱伦$46#日本无码$44#欧美无码$45#国产传媒$42#制服诱惑$47#网曝黑料$53#激情动漫$49#影片解说$55#美女主播$48#明星换脸$50#抖阴视频$51#伦理三级$54#女优明星$52#捆绑调教$56#网红头条$60#极品媚黑$58#萝莉少女$57#VR视角$63#人妖系列$61#韩国主播$62#女同性恋$198#乱伦精品$210#欧美大炮$211#极品学妹$215#国产视频$216",
+                "简介": ""
+            }
+        }
+    ],
+    "doh": [
+        {
+            "name": "DNSPod",
+            "url": "https://doh.pub/dns-query",
+            "ips": [
+                "119.29.29.29",
+                "119.28.28.28",
+                "2400:da00::6666",
+                "2400:da00:1::6666"
+            ]
+        },
+        {
+            "name": "Alidns",
+            "url": "https://dns.alidns.com/dns-query",
+            "ips": [
+                "223.5.5.5",
+                "223.6.6.6",
+                "2400:3200::1",
+                "2400:3200:baba::1"
+            ]
+        },
+        {
+            "name": "Google",
+            "url": "https://dns.google/dns-query",
+            "ips": [
+                "8.8.4.4",
+                "8.8.8.8",
+                "2001:4860:4860::8888",
+                "2001:4860:4860::8844"
+            ]
+        },
+        {
+            "name": "Cloudflare",
+            "url": "https://cloudflare-dns.com/dns-query",
+            "ips": [
+                "1.1.1.1",
+                "1.0.0.1",
+                "2606:4700:4700::1111",
+                "2606:4700:4700::1001"
+            ]
+        },
+        {
+            "name": "Tencent",
+            "url": "https://doh.pub/dns-query",
+            "ips": [
+                "1.12.12.12",
+                "120.53.53.53",
+                "2402:4e00::",
+                "2402:4e00:1::"
+            ]
+        },
+        {
+            "name": "360DNS",
+            "url": "https://doh.360.cn/dns-query",
+            "ips": [
+                "101.226.4.6",
+                "218.30.118.6",
+                "123.125.81.6",
+                "140.207.198.6"
+            ]
+        },
+        {
+            "name": "AdGuard",
+            "url": "https://dns.adguard.com/dns-query",
+            "ips": [
+                "94.140.14.140",
+                "94.140.14.141",
+                "2a10:50c0::ad1:ff",
+                "2a10:50c0::ad2:ff"
+            ]
+        },
+        {
+            "name": "DNSWatch",
+            "url": "https://dns.watch/dns-query",
+            "ips": [
+                "84.200.69.80",
+                "84.200.70.40",
+                "2001:67c:2354:2::64",
+                "2001:67c:2354:3::64"
+            ]
+        },
+        {
+            "name": "Quad9",
+            "url": "https://dns.quad9.net/dns-query",
+            "ips": [
+                "9.9.9.9",
+                "149.112.112.112",
+                "2620:fe::fe",
+                "2620:fe::9"
+            ]
+        }
+    ]
 }
